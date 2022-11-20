@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "start": "docker compose up -d",
+    "start:build-container": "docker compose up --build -d",
+    "start:console": "cd ./hasura && hasura console --endpoint http://localhost:8080 --admin-secret password",
+    "stop": "docker-compose down -v"
+  },
   "devDependencies": {
     "hasura-cli": "^2.15.1"
   }

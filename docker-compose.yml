@@ -10,7 +10,8 @@ services:
       - POSTGRES_DB=${POSTGRES_DB}
     restart: always
     volumes:
-      - ./hasura/db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/data
+      # - ./hasura/db_data:/var/lib/postgresql/data
     ports:
       - '5432:5432'
   graphql-engine:
