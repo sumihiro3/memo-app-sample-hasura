@@ -27,6 +27,7 @@ services:
         - DB_DATABASE=${POSTGRES_DB}
         - HASURA_ADMIN_SECRET=${HASURA_ADMIN_SECRET}
         - HASURA_JWT_SECRET=${HASURA_JWT_SECRET}
+        - HASURA_GRAPHQL_UNAUTHORIZED_ROLE=${HASURA_GRAPHQL_UNAUTHORIZED_ROLE}
     restart: always
     depends_on:
       - postgres
